@@ -1,0 +1,29 @@
+﻿@page
+@model Appr6312_Part_2.Pages.AllocateDonationModel
+@{
+}
+<h1>Active disaster donation</h1>
+
+@if (Model.hasData)
+{
+    <p>Hello @Model.fullName </p>
+    <p>A Donation of R @Model.fullAmount  has been recieved  </p>
+    
+}
+<div class="container">
+    <form method="POST">
+        <label for="fname">Donor names:</label><br>
+        <input type="text" id="fname" name="fullname"><br>
+
+        <label for="amount">Amount:</label><br>
+        <input type="text" id="amount" name="fullamount"><br>
+
+        <label for="disaster">Disaster name:</label><br>
+        <input type="text" id="disaster" name="disasterdetails"><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" style="height:195px"></textarea><br>
+
+        <input type="submit" value="Submit" />
+    </form>
+</div>
